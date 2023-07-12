@@ -80,30 +80,26 @@ function SignUpEmailPassword(props) {
   
     return (
       <>
-        <div className="flex min-h-full flex-col justify-center py-12 sm:px-6 lg:px-8">
+        <div className="flex min-h-screen items-center justify-center py-12 sm:px-6 lg:px-8 bg-black">
           <div className="sm:mx-auto sm:w-full sm:max-w-md">
-          <a href="/">
-                <img
-                    className="mx-auto h-12 w-auto"
-                    src="./assets/logo.png"
-                    alt="Gol"
-                />
+            <a href="/">
+              {/* this is the space for the logo */}
             </a>
-            <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">Create your account</h2>
-            <p className="mt-2 text-center text-sm text-gray-600">
+            <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-white">Create your account</h2>
+            <p className="mt-2 text-center text-sm text-white">
               Or{' '}
-              <a href="/signin" className="font-medium text-green-600 hover:text-green-500">
+              <a href="/" className="font-medium text-white hover:text-gray-200">
                 Login to existing account
               </a>
-              <t className="text-red">{errorMessage}</t>
+              <span className="text-red">{errorMessage}</span>
             </p>
           </div>
-  
-          <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-            <div className="bg-white px-4 py-8 shadow sm:rounded-lg sm:px-10">
-              <form className="space-y-6" onSubmit={handleSubmit} >
+
+          <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md bg-black">
+            <div className="bg-black px-4 py-8 shadow sm:rounded-lg sm:px-10">
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
+                  <label htmlFor="email" className="block text-sm font-medium leading-6 text-white">
                     Email address
                   </label>
                   <div className="mt-2">
@@ -113,13 +109,13 @@ function SignUpEmailPassword(props) {
                       type="email"
                       autoComplete="email"
                       required
-                      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm sm:leading-6"
+                      className="block w-full rounded-md border-0 py-1.5 text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm sm:leading-6"
                     />
                   </div>
                 </div>
-  
+
                 <div>
-                  <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">
+                  <label htmlFor="password" className="block text-sm font-medium leading-6 text-white">
                     Password
                   </label>
                   <div className="mt-2">
@@ -129,13 +125,14 @@ function SignUpEmailPassword(props) {
                       type="password"
                       autoComplete="current-password"
                       required
-                      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm sm:leading-6"
+                      className="block w-full rounded-md border-0 py-1.5 text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm sm:leading-6"
                     />
                   </div>
                 </div>
+
                 <div>
                   <button
-                    className="flex w-full justify-center rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
+                    className="flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-black shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
                   >
                     Sign up
                   </button>
@@ -148,20 +145,20 @@ function SignUpEmailPassword(props) {
                     <div className="w-full border-t border-gray-300" />
                   </div>
                   <div className="relative flex justify-center text-sm">
-                    <span className="bg-white px-2 text-gray-500">Or continue with</span>
+                  <span className="bg-black px-2 text-gray-500">Or continue with</span>
                   </div>
                 </div>
-  
+
                 <div className="mt-6">
                   <div>
                     <button
                       onClick={handleGoogleSignIn}
                       className="inline-flex items-center w-full justify-center px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-md hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
                     >
-                    <span>Sign up with Google</span>
+                      <span>Sign up with Google</span>
                     </button>
                   </div>
-                {errorMessage && <p>{errorMessage}</p>}
+                  {/* Rest of the code */}
                 </div>
               </div>
             </div>
